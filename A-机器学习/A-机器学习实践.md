@@ -45,7 +45,7 @@ Index
 
 
 ## 几种参数估计的区别于联系: MLE、MAP、贝叶斯 TODO
-
+- MLE、MAP、贝叶斯 参见 https://blog.csdn.net/u012426298/article/details/81751226
 
 ## 余弦相似度（Cos距离）与欧氏距离的区别和联系
 > geekcircle/machine-learning-interview-qa/[4.md](https://github.com/geekcircle/machine-learning-interview-qa/blob/master/questions/4.md)

@@ -1175,30 +1175,30 @@ public:
 ```C++
 class Solution {
 public:
-    ListNode* insertionSortList(ListNode* h) {
-        if (h == nullptr || h->next == nullptr)
-            return h;
-        
-        ListNode* q = nullptr;  // 开始时指向尾节点
-        ListNode* p;  // 迭代器
-        bool changed = true;
-        while (q != h->next && changed) {
-            changed = false;
-            p = h;
-            
-            // 把大的元素“冒泡”到尾部去
-            while (p->next && p->next != p) {
-                if (p->val > p->next->val) {  // 如果已经有序，则退出循环
-                    swap(p->val, p->next->val);
-                    changed = true;
-                }
-                p = p->next;
-            }
-            q = p;
-        }
-        
-        return h;
-    }
+	ListNode* insertionSortList(ListNode* head) {
+		if (head == nullptr || head->next == nullptr)
+			return head;
+
+		ListNode* q = nullptr;  // 开始时指向尾节点
+		ListNode* p;  // 迭代器
+		bool changed = true;
+		while (q != head->next && changed) {
+			changed = false;
+			p = head;
+
+			// 把大的元素“冒泡”到尾部去
+			while (p->next && p->next != q) {
+				if (p->val > p->next->val) {  // 如果已经有序，则退出循环
+					swap(p->val, p->next->val);
+					changed = true;
+				}
+				p = p->next;
+			}
+			q = p;
+		}
+
+		return head;
+	}
 };
 ```
 
